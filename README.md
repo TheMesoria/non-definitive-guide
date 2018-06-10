@@ -11,6 +11,7 @@ To nie jest przewodnik totalny. Jedynie tłumaczy niektóre slajdy, które wydaw
 Poprawki do ortografi i merytoryki walimy pull requestami: [gitrepo](github.com/TheMesoria/non-total-guide)
 Slajdy: [2015](http://dream.ict.pwr.wroc.pl/ssn/bus-www.pdf)
 
+
 ---
 
 ## Użytkownicy w systemie UNIX
@@ -57,7 +58,39 @@ Linux jest systemem:
 
 ---
 
-## Fundamentalne cechy wszytskich systemów UNIX
+## Fundamentalne cechy wszytskich systemów UNIX (copy pasta)
 
-- Rozróżnienie na **administratora** oraz **użytkownika**
-- 
+- Rozróżnienie na **administratora** oraz **użytkownika**.
+- Podział na pracę w trybie **użytkownika** i **jądra.**
+- Event Based System - aplikacje są usypiane i czekają na rozbudzenie eventem.
+- Wszystkie urządzenia, mechanizmy komunikacji wewnętrznej i sieciowej dostępne są przez przez pliki i deskryptory plików.
+
+---
+
+## CD:
+
+- System plików kontroluje dostęp do plików i blokuje prawa do zapisu.
+- Pamięc wirtualna is system plików stosują te same mechanizmy.
+- Prosty i spójny interfejs zapewniany przez system operacyjny (300 funkcji, podczas gdy windows kilkadziesiąt tysięcy)
+
+---
+
+## Tryb Jądra
+
+- W trybie jądra realizowane są wszystkie funkcje systemowe
+- Przejście do trybu jądra realizowane jest przez przerwanie programowe
+
+---
+
+## Ważne miejsca na `/` cd
+
+```bash
+# 'File System Table' w dawnych czasach służył 
+# do automatycznego montowania dysków
+/etc/fstab
+# Aktualnie zamontowane systemy plików
+/etc/mntab
+# ???
+/etc/exports
+```
+
