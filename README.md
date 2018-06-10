@@ -1,3 +1,5 @@
+
+
 <!-- $theme: gaia -->
 
 # Bezpieczeństwo 2018
@@ -82,7 +84,7 @@ Linux jest systemem:
 
 ---
 
-## Ważne miejsca na `/` cd
+## Ważne miejsca na `/` *cd*
 
 ```bash
 # 'File System Table' w dawnych czasach służył 
@@ -92,5 +94,50 @@ Linux jest systemem:
 /etc/mntab
 # ???
 /etc/exports
+```
+
+---
+
+## Prawa dostępu
+
+![](images/file.png)
+
+---
+
+## Prawa dostępu 2
+
+![](images/example_1.png)
+
+---
+
+## Prawa dostępu 3
+
+Aby otrzymać dostęp do plików musi być spełniony przynajmniej jeden warunek:
+
+- **EUID** == 0
+- **EUID** procesu jest zgodny z właścicielem pliku i ma on prawo do odczytu.
+- **EUID** nie zezwala, ale **GUID** zezwala na dostęp i odczyt.
+- **EUID**, ani **GUID** nie zezwalają na dostęp, ale plik jest **otwarty**.
+
+---
+
+## Prawa dostępu 4
+
+```bash
+# Zmienia prawa dostępu do objektów na systemie plików.
+chmod
+# 'Change group' zmienia ustawienia dotyczące
+# grupy na systemie plików.
+chgrp
+# 'Change owner' zmienia włąściciela pliku na
+# systemie plików. (ROOT potrzebny!)
+chown
+# Zmień domyślną wartość stanu pliku po zapisie
+# na systemie plików
+umask
+# Zmienia atrybuty plików w systemie plików.
+chattr
+# wyświetla atrybuty plików w systemie plików.
+lsattr
 ```
 
