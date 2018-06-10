@@ -30,6 +30,7 @@ Linux jest systemem:
 **UID** -> ID użytkownika który **STWORZYŁ** ten proces. Może być zmienione, tylko kiedy  proces ma EUID=0.
 **EUID** -> [*effective*] używane do ewaluacji zezwoleń procesu. (Tego używasz do stwierdzenia czy proces coś może czy nie.)
 **SUID** -> [*Saved UID*] Daje użytkownikowi prawo do wystartowania aplikacji, nie jako on, ale osoba zapisana.
+**RUID** -> [*Real UID*] kim tak naprawdę jesteś (nawet jak jesteś rootem, to odpowie twoim loginem)
 **GID** -> ID grupy użytkowników.
 
 [source1](https://stackoverflow.com/questions/205070/whats-the-deal-with-all-the-different-uids-a-process-can-have)
@@ -140,4 +141,20 @@ chattr
 # wyświetla atrybuty plików w systemie plików.
 lsattr
 ```
+
+---
+
+## Hasła
+
+Referencje
+[Kazik 12 Groszy](https://www.youtube.com/watch?v=mnmcdWiotds)
+
+---
+
+## Sniffer
+
+program komputerowy lub urządzenie, którego zadaniem jest przechwytywanie i ewentualnie analizowanie danych przepływających w sieci.
+Wspólną cechą wielu takich analizatorów jest przełączenie karty sieciowej w tryb mieszany (ang. promiscuous), w którym urządzenie odbiera wszystkie ramki z sieci, także te nieadresowane bezpośrednio do niego; sniffery mogą być uruchamiane także na routerze lub na komputerze będącym jedną ze stron komunikacji sieciowej – i w tych przypadkach tryb promiscuous nie jest konieczny.
+
+---
 
