@@ -13,7 +13,6 @@ To nie jest przewodnik totalny. Jedynie tłumaczy niektóre slajdy, które wydaw
 Poprawki do ortografi i merytoryki walimy pull requestami: [gitrepo](github.com/TheMesoria/non-total-guide)
 Slajdy: [2015](http://dream.ict.pwr.wroc.pl/ssn/bus-www.pdf)
 
-
 ---
 
 ## Użytkownicy w systemie UNIX
@@ -28,10 +27,10 @@ Linux jest systemem:
 ## UID w systemie UNIX
 
 **UID** -> ID użytkownika który **STWORZYŁ** ten proces. Może być zmienione, tylko kiedy  proces ma EUID=0.
+**GID** -> ID grupy użytkowników.
 **EUID** -> [*effective*] używane do ewaluacji zezwoleń procesu. (Tego używasz do stwierdzenia czy proces coś może czy nie.)
 **SUID** -> [*Saved UID*] Daje użytkownikowi prawo do wystartowania aplikacji, nie jako on, ale osoba zapisana.
 **RUID** -> [*Real UID*] kim tak naprawdę jesteś (nawet jak jesteś rootem, to odpowie twoim loginem)
-**GID** -> ID grupy użytkowników.
 
 [source1](https://stackoverflow.com/questions/205070/whats-the-deal-with-all-the-different-uids-a-process-can-have)
 [source2](https://www.linux.com/blog/what-suid-and-how-set-suid-linuxunix)
