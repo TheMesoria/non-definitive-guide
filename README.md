@@ -134,12 +134,44 @@ chgrp
 chown
 # Zmień domyślną wartość stanu pliku po zapisie
 # na systemie plików
-umask
+``umask``
 # Zmienia atrybuty plików w systemie plików.
 chattr
 # wyświetla atrybuty plików w systemie plików.
 lsattr
 ```
+
+---
+
+## Bity specjalne
+
+- Set User ID (04000)
+- Set Group ID (02000)
+- Sticky bit (01000)
+
+---
+
+### Set User ID (04000)
+
+- zmienić ID użytkownika związanego z procesem na czas jego wykonywania.
+- z największych problemów bezpieczeństwa systemów UNIX.
+
+---
+
+### Set Group ID (02000)
+
+- Pozwala zmienić ID grupy związanej z procesem na czas jego wykonywania.
+- W przypadku katalogów – wymusza zachowanie typu BSD (nowo powstające pliki będą miały właściciela grupowego takiego, jak właściciel katalogu).
+-  Obligatory locking – wymusza obowiązkowe blokowanie dostępu do plików (zamiast blokowania fakultatywnego )
+
+---
+
+### Sticky bit (01000)
+
+- W katalogach z publicznym prawem pisania (np. /tmp) wymusza kontrolę dostępu do kasowania plików
+  i modyfikacji ich atrybutów.
+-  W plikach wykonywalnych powoduje, że po zakończeniu działania procesu nie jest zwalniana pamięć
+  zawierająca kod programu (program jest gotowy do kolejnego uruchomienia).
 
 ---
 
@@ -153,6 +185,7 @@ Referencje
 ## Sniffer
 
 program komputerowy lub urządzenie, którego zadaniem jest przechwytywanie i ewentualnie analizowanie danych przepływających w sieci.
+
 Wspólną cechą wielu takich analizatorów jest przełączenie karty sieciowej w tryb mieszany (ang. promiscuous), w którym urządzenie odbiera wszystkie ramki z sieci, także te nieadresowane bezpośrednio do niego; sniffery mogą być uruchamiane także na routerze lub na komputerze będącym jedną ze stron komunikacji sieciowej – i w tych przypadkach tryb promiscuous nie jest konieczny.
 
 ---
